@@ -34,11 +34,8 @@ The app also includes a clean dark/light mode interface with saved preferences s
 
 1. Clone the repository
 
-   ```bash
-   git clone https://github.com/username/OrdoSorter.git
+   git clone https://github.com/username/OrdoSorter.git  
    cd OrdoSorter
-
-   ```
 
 2. Create a virtual environment (optional but recommended)
 
@@ -56,11 +53,7 @@ The app also includes a clean dark/light mode interface with saved preferences s
 
    ***
 
-   ```
-
-   ```
-
-💻 How to use the app
+## 💻 How to use the app
 
 Choose a folder containing files you want to organize.
 
@@ -74,7 +67,7 @@ Switch between dark and light mode — your choice is saved for next time! 🎉
 
 ---
 
-📦 Dependencies
+## 📦 Dependencies
 
 Python 3.12.10
 
@@ -88,6 +81,6 @@ customtkinter
 
 ---
 
-📝 License
+## 📝 License
 
 This project is open source under the MIT License.
