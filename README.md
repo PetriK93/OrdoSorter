@@ -1,6 +1,6 @@
 # OrdoSorter
 
-![Preview](https://github.com/user-attachments/assets/example-preview-image.jpg) <!-- Replace with actual screenshot later -->
+![Preview](https://github.com/user-attachments/assets/9f158b79-98b1-46f3-91ad-0f3f59f49d41)
 
 ## 📖 Introduction
 
