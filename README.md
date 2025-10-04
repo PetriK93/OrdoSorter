@@ -54,9 +54,10 @@ The app also includes a clean dark/light mode interface with saved preferences s
 
    python main.py
 
+   ***
+
    ```
 
-   ---
    ```
 
 💻 How to use the app
