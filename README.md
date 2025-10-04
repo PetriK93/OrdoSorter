@@ -75,7 +75,7 @@ Switch between dark and light mode — your choice is saved for next time! 🎉
 
 📦 Dependencies
 
-Python 3.11+ (latest recommended)
+Python 3.12.10
 
 pathlib (standard library)
 
