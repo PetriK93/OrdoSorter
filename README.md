@@ -81,6 +81,8 @@ pillow
 
 shutil
 
+json
+
 ---
 
 ## 📝 License
