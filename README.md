@@ -4,7 +4,7 @@
 
 ## 📖 Introduction
 
-OrdoSorter is a desktop tool built with Python, Tkinter, and CustomTkinter for organizing files automatically.  
+OrdoSorter is a desktop tool built with Python for organizing files automatically.  
 It scans a folder of your choice, categorizes files by type, and neatly places them into subfolders (e.g., Images, Videos, Documents).
 
 The app also includes a clean dark/light mode interface with saved preferences so your theme choice persists between sessions.
@@ -45,7 +45,7 @@ The app also includes a clean dark/light mode interface with saved preferences s
 
 3. Install dependencies
 
-   pip install customtkinter
+   pip install customtkinter pillow
 
 4. Run the app
 
@@ -71,13 +71,15 @@ Switch between dark and light mode — your choice is saved for next time! 🎉
 
 Python 3.12.10
 
-pathlib (standard library)
+pathlib
 
-os (standard library)
+os
 
-tkinter (standard library)
+tkinter
 
 customtkinter
+
+pillow
 
 ---
 
