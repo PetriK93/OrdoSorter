@@ -71,8 +71,6 @@ Switch between dark and light mode — your choice is saved for next time! 🎉
 
 Python 3.12.10
 
-pathlib
-
 os
 
 tkinter
