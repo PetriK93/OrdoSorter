@@ -1,6 +1,6 @@
 # OrdoSorter
 
-![Preview](https://github.com/user-attachments/assets/9f158b79-98b1-46f3-91ad-0f3f59f49d41)
+![Preview](https://github.com/user-attachments/assets/0c75de5a-a53f-4821-8376-d142ecb62d94)
 
 ## 📖 Introduction
 
@@ -80,6 +80,8 @@ tkinter
 customtkinter
 
 pillow
+
+shutil
 
 ---
 

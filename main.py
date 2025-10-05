@@ -2,6 +2,7 @@ import tkinter as tk
 import customtkinter as ctk
 from PIL import Image
 from modules.select_folder import select_folder
+from modules.organize_folder import organize_folder
 
 # Set default appearance mode & color theme.
 ctk.set_appearance_mode("dark")
@@ -30,12 +31,12 @@ selected_folder = None
 def on_select_folder():
     global selected_folder
     # Pass the previous folder as initial_dir to start there
-    selected_folder = select_folder(arrow_label, folder_label, initial_dir=selected_folder)
+    selected_folder = select_folder(arrow_label, folder_label, selected_folder_label, selected_folder, initial_dir=selected_folder)
     
 def on_organize_folder():
     if selected_folder:
         print(f"Organizing: {selected_folder}")
-        # Your organize logic here
+        organize_folder(selected_folder, organize_label)
     else:
         print("No folder selected!")
 
@@ -97,6 +98,14 @@ folder_label = ctk.CTkLabel(
     font=("Arial", 16)
 )
 
+selected_folder_label = ctk.CTkLabel(
+    app,
+    text="",
+    text_color="white",
+    font=("Arial", 11),
+    wraplength=380
+)
+
 arrow_label = ctk.CTkLabel(
     app,
     image=arrow_image,
@@ -107,7 +116,8 @@ organize_button = ctk.CTkButton(
     app,
     image=organize_image,
     text="",
-    fg_color="transparent"
+    fg_color="transparent",
+    command=on_organize_folder
 )
 
 organize_label = ctk.CTkLabel(
@@ -121,6 +131,7 @@ organize_label = ctk.CTkLabel(
 logo_label.place(relx=0.5, rely=0.25, anchor="center")
 folder_button.place(relx=0.25, rely=0.7, anchor="center")
 folder_label.place(relx=0.25, rely=0.83, anchor="center")
+selected_folder_label.place(relx=0.5, rely=0.94, anchor="center")
 organize_button.place(relx=0.75, rely=0.7, anchor="center")
 organize_label.place(relx=0.75, rely=0.83, anchor="center")
 
