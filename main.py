@@ -15,7 +15,7 @@ def load_settings():
                 return json.load(f)
         except (json.JSONDecodeError, IOError):
             pass
-    return {"theme": "dark"}  # default if file missing or corrupt
+    return {"theme": "dark"}
 
 def save_settings(settings):
     try:
@@ -24,30 +24,34 @@ def save_settings(settings):
     except IOError:
         print("Warning: Could not save settings.")
 
-# Load saved settings (theme)
+# Load saved settings (theme).
 settings = load_settings()
 current_theme = settings.get("theme", "dark")
 ctk.set_appearance_mode(current_theme.capitalize())
 
 # Import images.
-logo = "assets/logo_image.png"
+logo_dark = "assets/logo_image_dark.png"
+logo_light = "assets/logo_image_light.png"
 dark_mode = "assets/dark_mode_icon.png"
 light_mode = "assets/light_mode_icon.png"
-folder = "assets/folder_image.png"
-arrow = "assets/arrow_image.png"
-organize = "assets/organize_image.png"
+folder_dark = "assets/folder_image_dark.png"
+folder_light = "assets/folder_image_light.png"
+arrow_dark = "assets/arrow_image_dark.png"
+arrow_light = "assets/arrow_image_light.png"
+organize_dark = "assets/organize_image_dark.png"
+organize_light = "assets/organize_image_light.png"
 
 # Theme colors. Dark / Light.
 dark_colors = {
     "background": "#0D1117",
-    "button": "#00B5F0",
-    "text": "white"
+    "text": "white",
+    "hover": "#00b2e6"
 }
 
 light_colors = {
-    "background": "pink",
-    "button": "white",
-    "text": "black"
+    "background": "#ffa6c9",
+    "text": "black",
+    "hover": "#c21666"
 }
 
 # Your selected folder.
@@ -85,6 +89,8 @@ def change_theme():
 
     # Apply background color
     app.configure(fg_color=colors["background"])
+    folder_button.configure(hover_color=colors["hover"])
+    organize_button.configure(hover_color=colors["hover"])
 
     # Apply text color from theme dictionary
     for label in (folder_label, selected_folder_label, organize_label):
@@ -104,8 +110,8 @@ app.configure(fg_color=colors["background"])
 
 # Create images.
 logo_image = ctk.CTkImage(
-    light_image=Image.open(logo),
-    dark_image=Image.open(logo),
+    light_image=Image.open(logo_light),
+    dark_image=Image.open(logo_dark),
     size=(150, 150)
 )
 
@@ -116,20 +122,20 @@ color_mode_image = ctk.CTkImage(
 )
 
 folder_image = ctk.CTkImage(
-    light_image=Image.open(folder),
-    dark_image=Image.open(folder),
+    light_image=Image.open(folder_light),
+    dark_image=Image.open(folder_dark),
     size=(75, 75),
 )
 
 arrow_image = ctk.CTkImage(
-    light_image=Image.open(arrow),
-    dark_image=Image.open(arrow),
+    light_image=Image.open(arrow_light),
+    dark_image=Image.open(arrow_dark),
     size=(38, 38)
 )
 
 organize_image = ctk.CTkImage(
-    light_image=Image.open(organize),
-    dark_image=Image.open(organize),
+    light_image=Image.open(organize_light),
+    dark_image=Image.open(organize_dark),
     size=(75, 75)
 )
 
@@ -154,7 +160,8 @@ folder_button = ctk.CTkButton(
     image=folder_image,
     text="",
     command=on_select_folder,
-    fg_color="transparent"
+    fg_color="transparent",
+    hover_color=colors["hover"]
 )
 
 folder_label = ctk.CTkLabel(
@@ -183,7 +190,8 @@ organize_button = ctk.CTkButton(
     image=organize_image,
     text="",
     fg_color="transparent",
-    command=on_organize_folder
+    command=on_organize_folder,
+    hover_color=colors["hover"]
 )
 
 organize_label = ctk.CTkLabel(

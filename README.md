@@ -1,6 +1,6 @@
 # OrdoSorter
 
-![Preview](https://github.com/user-attachments/assets/0c75de5a-a53f-4821-8376-d142ecb62d94)
+![Preview](https://github.com/user-attachments/assets/fc2705a9-05ce-4f64-b183-4d50144e1b6f)
 
 ## 📖 Introduction
 
