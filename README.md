@@ -34,7 +34,7 @@ The app also includes a clean dark/light mode interface with saved preferences s
 
 1. Clone the repository
 
-   git clone https://github.com/username/OrdoSorter.git  
+   git clone https://github.com/PetriK93/OrdoSorter.git  
    cd OrdoSorter
 
 2. Create a virtual environment (optional but recommended)
