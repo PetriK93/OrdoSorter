@@ -65,3 +65,4 @@ def organize_folder(selected_folder, organize_label):
     # Update the label text.
     organize_label.configure(text="Folder organized ✅")
     print(f"Files in '{selected_folder}' have been organized.")
+    messagebox.showinfo("Success", "All files have been sorted into their respective subfolders.")
